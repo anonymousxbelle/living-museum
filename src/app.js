@@ -58,6 +58,21 @@ function galleryNav(activeId) {
 function artistCard(a){const words=a.name.split(' ');const initial=words.length>1?`${words[0][0]}${words.at(-1)[0]}`:a.name.slice(0,2);return `<a href="#/artist/${a.id}" class="artist-card"><div class="artist-card-portrait"><div class="portrait-placeholder" aria-hidden="true">${esc(initial)}</div><img data-wiki="${esc(a.wikipedia)}" data-kind="portrait" alt="Portrait of ${esc(a.name)}" loading="lazy" hidden /></div><div class="artist-card-body"><h3>${esc(a.name)}</h3><p class="artist-card-role">${esc(a.role)}</p><div class="artist-card-action"><span>View exhibit</span></div></div></a>`}
 function galleryPage(id){const g=getGallery(id);if(!g)return missing();const artists=byGallery(id);return wrapMain(`<section class="gallery-hero" style="--bg-photo:url('${g.image}')"><div class="gallery-hero-bg" aria-hidden="true"></div><div class="shell"><div class="breadcrumbs"><a href="#/">Entrance</a><span class="slash">/</span><a href="#/galleries">Galleries</a><span class="slash">/</span><span>${esc(g.name)}</span></div><div class="tiny eyebrow">Gallery ${g.number} &nbsp; · &nbsp; ${artists.length} artists</div><h1>${esc(g.name)}</h1><p class="subtitle">${esc(g.description)}</p></div></section>${galleryNav(g.id)}<section class="section artists-section"><div class="shell"><div class="section-heading"><h2>Artists</h2></div><div class="artist-grid">${artists.map(artistCard).join('')}</div></div></section>`,'gallery-main')}
 const catalogSources = {
+  'The Glass Menagerie': 'https://www.concordtheatricals.com/p/98161/the-glass-menagerie',
+  'Cat on a Hot Tin Roof': 'https://www.ibdb.com/broadway-production/cat-on-a-hot-tin-roof-2508',
+  'Romeo and Juliet': 'https://www.folger.edu/explore/shakespeares-works/romeo-and-juliet/',
+  'A Raisin in the Sun': 'https://www.themorgan.org/literary-historical/91335',
+  'The Sign in Sidney Brustein’s Window': 'https://www.lhlt.org/works',
+  'Les Blancs': 'https://www.lhlt.org/news/joi-gresham-introduces-les-blancs-national-theatre-home',
+  'A Street in Bronzeville': 'https://www.loc.gov/programs/poetry-and-literature/poet-laureate/poets-laureate/item/n50041281/gwendolyn-brooks/',
+  'Annie Allen': 'https://exhibits.library.illinois.edu/s/rbml/item/30409',
+  'Mending Wall': 'https://rpo.library.utoronto.ca/content/mending-wall',
+  'Stopping by Woods on a Snowy Evening': 'https://rpo.library.utoronto.ca/content/stopping-woods-snowy-evening-3',
+  'The Weary Blues': 'https://library.brown.edu/exhibits/archive/hughes/checklist.html',
+  'The Basket of Apples': 'https://www.cezannecatalogue.com/catalogue/entry.php?id=776',
+  'Red Canna': 'https://access-ok.okeeffemuseum.org/object/8561/',
+  'Jimson Weed/White Flower No. 1': 'https://crystalbridges.org/artworks/2014-35',
+  'Red Cube': 'https://noguchi.whirlihost.com/Detail/artwork/993',
   "Moulin Rouge: La Goulue": "https://www.metmuseum.org/art/collection/search/333990",
   "Jane Avril": "https://www.metmuseum.org/art/collection/search/333993",
   "The Migration Series": "https://www.moma.org/calendar/exhibitions/444",
