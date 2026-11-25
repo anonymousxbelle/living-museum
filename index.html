@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0c1020" />
+    <meta name="description" content="Step inside The Living Museum: 31 creative voices across music, theater, literature, visual arts, and sculpture." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Italiana&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>The Living Museum — An Exploration of Creative Minds</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="app"></div>
+    <dialog id="lightbox" class="lightbox" aria-label="Artwork preview">
+      <div class="lightbox-header"><span id="lightbox-title">Artwork</span><button id="lightbox-close" type="button" aria-label="Close image">✕</button></div>
+      <img id="lightbox-image" alt="" />
+      <a id="lightbox-source" target="_blank" rel="noopener noreferrer">Open original source ↗</a>
+    </dialog>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
