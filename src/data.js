@@ -20,7 +20,7 @@ export const GALLERIES = [
   { id:'sound', number:'I', name:'The Art of Sound', short:'Music', tagline:'Where emotion finds its voice.', description:'An exploration of the voices, compositions, and performances that moved the world.', icon:'♫', accent:'#d9b4e6', image:PHOTOS.sound },
   { id:'performance', number:'II', name:'The Art of Performance', short:'Theater', tagline:'Every stage holds a thousand lives.', description:'Enter the world of playwrights whose stories still echo through theaters today.', icon:'✧', accent:'#f0ac9c', image:PHOTOS.performance },
   { id:'words', number:'III', name:'The Art of Words', short:'Literature', tagline:'Some worlds are made of words.', description:'Meet the novelists, poets, and thinkers who turned language into lasting art.', icon:'❦', accent:'#d2c795', image:PHOTOS.words },
-  { id:'visual', number:'IV', name:'Visual Arts', short:'Painting & image', tagline:'New ways of looking at the world.', description:'Discover artists who transformed color, perspective, portraiture, and storytelling through images.', icon:'✳', accent:'#a6caca', image:PHOTOS.visual },
+  { id:'visual', number:'IV', name:'Visual Arts', short:'Painting & image', tagline:'New ways of looking at the world.', description:'Discover artists who transformed color, perspective, portraiture, and storytelling through images.', icon:'✦', accent:'#a6caca', image:PHOTOS.visual },
   { id:'form', number:'V', name:'The Art of Form', short:'Sculpture', tagline:'An idea made tangible.', description:'A gallery of sculpture, light, material, and the spaces between objects.', icon:'◇', accent:'#d8c4a8', image:PHOTOS.form }
 ];
 const W=(title,year,description,media='book',wiki='',video='')=>({title,year,description,media,wiki,video});
